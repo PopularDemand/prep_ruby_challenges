@@ -1,9 +1,9 @@
-def count
+def count(people, max)
 	reversed = false
 	person = 1
 	number = 1
 
-	while number < 101
+	while number <= max
 		inc = 1
 		skip = false
 
@@ -13,8 +13,8 @@ def count
 		inc += 1 if skip
 		inc *= -1 if reversed
 
-		person -= 10 if person > 10
-		person += 10 if person <= 0
+		person -= people if person > people
+		person += people if person <= 0
 
 		puts "Person #{person} says #{number}"
 
@@ -23,4 +23,4 @@ def count
 	end
 end
 
-count
+count(10, 100)
